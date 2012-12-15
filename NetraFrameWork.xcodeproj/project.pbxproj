@@ -1,0 +1,298 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D0DF4726167CC168009838EB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0DF4725167CC168009838EB /* UIKit.framework */; };
+		D0DF4728167CC168009838EB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0DF4727167CC168009838EB /* Foundation.framework */; };
+		D0DF472A167CC168009838EB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0DF4729167CC168009838EB /* CoreGraphics.framework */; };
+		D0DF4730167CC168009838EB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D0DF472E167CC168009838EB /* InfoPlist.strings */; };
+		D0DF4732167CC168009838EB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D0DF4731167CC168009838EB /* main.m */; };
+		D0DF4736167CC168009838EB /* NetraAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D0DF4735167CC168009838EB /* NetraAppDelegate.m */; };
+		D0DF4738167CC168009838EB /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = D0DF4737167CC168009838EB /* Default.png */; };
+		D0DF473A167CC168009838EB /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D0DF4739167CC168009838EB /* Default@2x.png */; };
+		D0DF473C167CC168009838EB /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D0DF473B167CC168009838EB /* Default-568h@2x.png */; };
+		D0DF473F167CC168009838EB /* NetraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0DF473E167CC168009838EB /* NetraViewController.m */; };
+		D0DF4742167CC168009838EB /* NetraViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0DF4740167CC168009838EB /* NetraViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		D0DF4721167CC168009838EB /* NetraFrameWork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetraFrameWork.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0DF4725167CC168009838EB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		D0DF4727167CC168009838EB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D0DF4729167CC168009838EB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		D0DF472D167CC168009838EB /* NetraFrameWork-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NetraFrameWork-Info.plist"; sourceTree = "<group>"; };
+		D0DF472F167CC168009838EB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D0DF4731167CC168009838EB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D0DF4733167CC168009838EB /* NetraFrameWork-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NetraFrameWork-Prefix.pch"; sourceTree = "<group>"; };
+		D0DF4734167CC168009838EB /* NetraAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetraAppDelegate.h; sourceTree = "<group>"; };
+		D0DF4735167CC168009838EB /* NetraAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetraAppDelegate.m; sourceTree = "<group>"; };
+		D0DF4737167CC168009838EB /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		D0DF4739167CC168009838EB /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		D0DF473B167CC168009838EB /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		D0DF473D167CC168009838EB /* NetraViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetraViewController.h; sourceTree = "<group>"; };
+		D0DF473E167CC168009838EB /* NetraViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetraViewController.m; sourceTree = "<group>"; };
+		D0DF4741167CC168009838EB /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/NetraViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D0DF471E167CC168009838EB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0DF4726167CC168009838EB /* UIKit.framework in Frameworks */,
+				D0DF4728167CC168009838EB /* Foundation.framework in Frameworks */,
+				D0DF472A167CC168009838EB /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D0DF4716167CC168009838EB = {
+			isa = PBXGroup;
+			children = (
+				D0DF472B167CC168009838EB /* NetraFrameWork */,
+				D0DF4724167CC168009838EB /* Frameworks */,
+				D0DF4722167CC168009838EB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D0DF4722167CC168009838EB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D0DF4721167CC168009838EB /* NetraFrameWork.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D0DF4724167CC168009838EB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D0DF4725167CC168009838EB /* UIKit.framework */,
+				D0DF4727167CC168009838EB /* Foundation.framework */,
+				D0DF4729167CC168009838EB /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D0DF472B167CC168009838EB /* NetraFrameWork */ = {
+			isa = PBXGroup;
+			children = (
+				D0DF4734167CC168009838EB /* NetraAppDelegate.h */,
+				D0DF4735167CC168009838EB /* NetraAppDelegate.m */,
+				D0DF473D167CC168009838EB /* NetraViewController.h */,
+				D0DF473E167CC168009838EB /* NetraViewController.m */,
+				D0DF4740167CC168009838EB /* NetraViewController.xib */,
+				D0DF472C167CC168009838EB /* Supporting Files */,
+			);
+			path = NetraFrameWork;
+			sourceTree = "<group>";
+		};
+		D0DF472C167CC168009838EB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D0DF472D167CC168009838EB /* NetraFrameWork-Info.plist */,
+				D0DF472E167CC168009838EB /* InfoPlist.strings */,
+				D0DF4731167CC168009838EB /* main.m */,
+				D0DF4733167CC168009838EB /* NetraFrameWork-Prefix.pch */,
+				D0DF4737167CC168009838EB /* Default.png */,
+				D0DF4739167CC168009838EB /* Default@2x.png */,
+				D0DF473B167CC168009838EB /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D0DF4720167CC168009838EB /* NetraFrameWork */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D0DF4745167CC168009838EB /* Build configuration list for PBXNativeTarget "NetraFrameWork" */;
+			buildPhases = (
+				D0DF471D167CC168009838EB /* Sources */,
+				D0DF471E167CC168009838EB /* Frameworks */,
+				D0DF471F167CC168009838EB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NetraFrameWork;
+			productName = NetraFrameWork;
+			productReference = D0DF4721167CC168009838EB /* NetraFrameWork.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D0DF4718167CC168009838EB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = Netra;
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = Netra;
+			};
+			buildConfigurationList = D0DF471B167CC168009838EB /* Build configuration list for PBXProject "NetraFrameWork" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = D0DF4716167CC168009838EB;
+			productRefGroup = D0DF4722167CC168009838EB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D0DF4720167CC168009838EB /* NetraFrameWork */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D0DF471F167CC168009838EB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0DF4730167CC168009838EB /* InfoPlist.strings in Resources */,
+				D0DF4738167CC168009838EB /* Default.png in Resources */,
+				D0DF473A167CC168009838EB /* Default@2x.png in Resources */,
+				D0DF473C167CC168009838EB /* Default-568h@2x.png in Resources */,
+				D0DF4742167CC168009838EB /* NetraViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D0DF471D167CC168009838EB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0DF4732167CC168009838EB /* main.m in Sources */,
+				D0DF4736167CC168009838EB /* NetraAppDelegate.m in Sources */,
+				D0DF473F167CC168009838EB /* NetraViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D0DF472E167CC168009838EB /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D0DF472F167CC168009838EB /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		D0DF4740167CC168009838EB /* NetraViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D0DF4741167CC168009838EB /* en */,
+			);
+			name = NetraViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D0DF4743167CC168009838EB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		D0DF4744167CC168009838EB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D0DF4746167CC168009838EB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NetraFrameWork/NetraFrameWork-Prefix.pch";
+				INFOPLIST_FILE = "NetraFrameWork/NetraFrameWork-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		D0DF4747167CC168009838EB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NetraFrameWork/NetraFrameWork-Prefix.pch";
+				INFOPLIST_FILE = "NetraFrameWork/NetraFrameWork-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D0DF471B167CC168009838EB /* Build configuration list for PBXProject "NetraFrameWork" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0DF4743167CC168009838EB /* Debug */,
+				D0DF4744167CC168009838EB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D0DF4745167CC168009838EB /* Build configuration list for PBXNativeTarget "NetraFrameWork" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0DF4746167CC168009838EB /* Debug */,
+				D0DF4747167CC168009838EB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D0DF4718167CC168009838EB /* Project object */;
+}
