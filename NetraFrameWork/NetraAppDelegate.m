@@ -8,7 +8,10 @@
 
 #import "NetraAppDelegate.h"
 
+#import "JASidePanelController.h"
 #import "NetraViewController.h"
+#import "RightViewController.h"
+#import "LeftViewController.h"
 
 @implementation NetraAppDelegate
 
@@ -21,9 +24,13 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+	
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     // Override point for customization after application launch.
-	self.viewController = [[[NetraViewController alloc] initWithNibName:@"NetraViewController" bundle:nil] autorelease];
+	self.viewController=[[JASidePanelController alloc]init];
+	self.viewController.centerPanel = [[UINavigationController alloc] initWithRootViewController:[[NetraViewController alloc] init]];
+    self.viewController.rightPanel = [[RightViewController alloc] init];
+	 self.viewController.leftPanel = [[LeftViewController alloc] init];
 	self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
     return YES;

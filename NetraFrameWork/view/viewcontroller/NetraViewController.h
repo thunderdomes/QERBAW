@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface NetraViewController : UIViewController
-
+{
+	UINavigationBar *navbar;
+}
 @end

@@ -17,6 +17,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+	self.title=@"Travel Editor Desk";
+	navbar=self.navigationController.navigationBar;
 	// Do any additional setup after loading the view, typically from a nib.
 }
 

@@ -8,12 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@class NetraViewController;
+@class JASidePanelController;
 
 @interface NetraAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
-@property (strong, nonatomic) NetraViewController *viewController;
+@property (strong, nonatomic) JASidePanelController *viewController;
 
 @end
