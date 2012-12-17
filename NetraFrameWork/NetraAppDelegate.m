@@ -28,9 +28,9 @@
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     // Override point for customization after application launch.
 	self.viewController=[[JASidePanelController alloc]init];
-	self.viewController.centerPanel = [[UINavigationController alloc] initWithRootViewController:[[NetraViewController alloc] init]];
-    self.viewController.rightPanel = [[RightViewController alloc] init];
-	 self.viewController.leftPanel = [[LeftViewController alloc] init];
+	self.viewController.centerPanel = [[UINavigationController alloc] initWithRootViewController:[[NetraViewController alloc] initWithNibName:@"NetraViewController" bundle:nil]];
+    //self.viewController.rightPanel = [[RightViewController alloc] init];
+	self.viewController.leftPanel = [[LeftViewController alloc] init];
 	self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
     return YES;
@@ -55,7 +55,7 @@
 
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
-	// Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+	
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application

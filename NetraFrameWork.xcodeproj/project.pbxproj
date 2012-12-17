@@ -7,6 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D0CEAA00167EF14F008536F6 /* NetraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0CEA9FE167EF14F008536F6 /* NetraViewController.m */; };
+		D0CEAA01167EF14F008536F6 /* NetraViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0CEA9FF167EF14F008536F6 /* NetraViewController.xib */; };
+		D0CEAA19167EF3A0008536F6 /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = D0CEAA07167EF3A0008536F6 /* AFHTTPClient.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		D0CEAA1A167EF3A0008536F6 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = D0CEAA09167EF3A0008536F6 /* AFHTTPRequestOperation.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		D0CEAA1B167EF3A0008536F6 /* AFImageRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = D0CEAA0B167EF3A0008536F6 /* AFImageRequestOperation.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		D0CEAA1C167EF3A0008536F6 /* AFJSONRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = D0CEAA0D167EF3A0008536F6 /* AFJSONRequestOperation.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		D0CEAA1D167EF3A0008536F6 /* AFNetworkActivityIndicatorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D0CEAA0F167EF3A0008536F6 /* AFNetworkActivityIndicatorManager.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		D0CEAA1E167EF3A0008536F6 /* AFPropertyListRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = D0CEAA12167EF3A0008536F6 /* AFPropertyListRequestOperation.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		D0CEAA1F167EF3A0008536F6 /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = D0CEAA14167EF3A0008536F6 /* AFURLConnectionOperation.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		D0CEAA20167EF3A0008536F6 /* AFXMLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = D0CEAA16167EF3A0008536F6 /* AFXMLRequestOperation.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		D0CEAA21167EF3A0008536F6 /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = D0CEAA18167EF3A0008536F6 /* UIImageView+AFNetworking.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		D0CEAA24167EF455008536F6 /* NetraObject.m in Sources */ = {isa = PBXBuildFile; fileRef = D0CEAA23167EF455008536F6 /* NetraObject.m */; };
+		D0CEAA28167F0891008536F6 /* NetraCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D0CEAA27167F0891008536F6 /* NetraCell.m */; };
 		D0DF4726167CC168009838EB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0DF4725167CC168009838EB /* UIKit.framework */; };
 		D0DF4728167CC168009838EB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0DF4727167CC168009838EB /* Foundation.framework */; };
 		D0DF472A167CC168009838EB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0DF4729167CC168009838EB /* CoreGraphics.framework */; };
@@ -16,7 +29,6 @@
 		D0DF4738167CC168009838EB /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = D0DF4737167CC168009838EB /* Default.png */; };
 		D0DF473A167CC168009838EB /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D0DF4739167CC168009838EB /* Default@2x.png */; };
 		D0DF473C167CC168009838EB /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D0DF473B167CC168009838EB /* Default-568h@2x.png */; };
-		D0DF474D167CC201009838EB /* NetraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0DF474B167CC201009838EB /* NetraViewController.m */; };
 		D0DF4755167CC241009838EB /* JASidePanelController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0DF4752167CC241009838EB /* JASidePanelController.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		D0DF4756167CC241009838EB /* UIViewController+JASidePanel.m in Sources */ = {isa = PBXBuildFile; fileRef = D0DF4754167CC241009838EB /* UIViewController+JASidePanel.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		D0DF4758167CC486009838EB /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0DF4757167CC486009838EB /* QuartzCore.framework */; };
@@ -25,6 +37,32 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D0CEA9FD167EF14F008536F6 /* NetraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetraViewController.h; sourceTree = "<group>"; };
+		D0CEA9FE167EF14F008536F6 /* NetraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetraViewController.m; sourceTree = "<group>"; };
+		D0CEA9FF167EF14F008536F6 /* NetraViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NetraViewController.xib; sourceTree = "<group>"; };
+		D0CEAA06167EF3A0008536F6 /* AFHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPClient.h; sourceTree = "<group>"; };
+		D0CEAA07167EF3A0008536F6 /* AFHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPClient.m; sourceTree = "<group>"; };
+		D0CEAA08167EF3A0008536F6 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
+		D0CEAA09167EF3A0008536F6 /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
+		D0CEAA0A167EF3A0008536F6 /* AFImageRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFImageRequestOperation.h; sourceTree = "<group>"; };
+		D0CEAA0B167EF3A0008536F6 /* AFImageRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFImageRequestOperation.m; sourceTree = "<group>"; };
+		D0CEAA0C167EF3A0008536F6 /* AFJSONRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFJSONRequestOperation.h; sourceTree = "<group>"; };
+		D0CEAA0D167EF3A0008536F6 /* AFJSONRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFJSONRequestOperation.m; sourceTree = "<group>"; };
+		D0CEAA0E167EF3A0008536F6 /* AFNetworkActivityIndicatorManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkActivityIndicatorManager.h; sourceTree = "<group>"; };
+		D0CEAA0F167EF3A0008536F6 /* AFNetworkActivityIndicatorManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkActivityIndicatorManager.m; sourceTree = "<group>"; };
+		D0CEAA10167EF3A0008536F6 /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworking.h; sourceTree = "<group>"; };
+		D0CEAA11167EF3A0008536F6 /* AFPropertyListRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFPropertyListRequestOperation.h; sourceTree = "<group>"; };
+		D0CEAA12167EF3A0008536F6 /* AFPropertyListRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFPropertyListRequestOperation.m; sourceTree = "<group>"; };
+		D0CEAA13167EF3A0008536F6 /* AFURLConnectionOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLConnectionOperation.h; sourceTree = "<group>"; };
+		D0CEAA14167EF3A0008536F6 /* AFURLConnectionOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLConnectionOperation.m; sourceTree = "<group>"; };
+		D0CEAA15167EF3A0008536F6 /* AFXMLRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFXMLRequestOperation.h; sourceTree = "<group>"; };
+		D0CEAA16167EF3A0008536F6 /* AFXMLRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFXMLRequestOperation.m; sourceTree = "<group>"; };
+		D0CEAA17167EF3A0008536F6 /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
+		D0CEAA18167EF3A0008536F6 /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
+		D0CEAA22167EF455008536F6 /* NetraObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetraObject.h; sourceTree = "<group>"; };
+		D0CEAA23167EF455008536F6 /* NetraObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetraObject.m; sourceTree = "<group>"; };
+		D0CEAA26167F0891008536F6 /* NetraCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetraCell.h; sourceTree = "<group>"; };
+		D0CEAA27167F0891008536F6 /* NetraCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetraCell.m; sourceTree = "<group>"; };
 		D0DF4721167CC168009838EB /* NetraFrameWork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetraFrameWork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0DF4725167CC168009838EB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D0DF4727167CC168009838EB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -38,8 +76,6 @@
 		D0DF4737167CC168009838EB /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		D0DF4739167CC168009838EB /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		D0DF473B167CC168009838EB /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		D0DF474A167CC201009838EB /* NetraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetraViewController.h; sourceTree = "<group>"; };
-		D0DF474B167CC201009838EB /* NetraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetraViewController.m; sourceTree = "<group>"; };
 		D0DF4751167CC241009838EB /* JASidePanelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JASidePanelController.h; sourceTree = "<group>"; };
 		D0DF4752167CC241009838EB /* JASidePanelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JASidePanelController.m; sourceTree = "<group>"; };
 		D0DF4753167CC241009838EB /* UIViewController+JASidePanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+JASidePanel.h"; sourceTree = "<group>"; };
@@ -66,6 +102,65 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D0CEAA02167EF36F008536F6 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		D0CEAA03167EF36F008536F6 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				D0CEAA04167EF386008536F6 /* Json */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		D0CEAA04167EF386008536F6 /* Json */ = {
+			isa = PBXGroup;
+			children = (
+				D0CEAA22167EF455008536F6 /* NetraObject.h */,
+				D0CEAA23167EF455008536F6 /* NetraObject.m */,
+			);
+			path = Json;
+			sourceTree = "<group>";
+		};
+		D0CEAA05167EF3A0008536F6 /* AFNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				D0CEAA06167EF3A0008536F6 /* AFHTTPClient.h */,
+				D0CEAA07167EF3A0008536F6 /* AFHTTPClient.m */,
+				D0CEAA08167EF3A0008536F6 /* AFHTTPRequestOperation.h */,
+				D0CEAA09167EF3A0008536F6 /* AFHTTPRequestOperation.m */,
+				D0CEAA0A167EF3A0008536F6 /* AFImageRequestOperation.h */,
+				D0CEAA0B167EF3A0008536F6 /* AFImageRequestOperation.m */,
+				D0CEAA0C167EF3A0008536F6 /* AFJSONRequestOperation.h */,
+				D0CEAA0D167EF3A0008536F6 /* AFJSONRequestOperation.m */,
+				D0CEAA0E167EF3A0008536F6 /* AFNetworkActivityIndicatorManager.h */,
+				D0CEAA0F167EF3A0008536F6 /* AFNetworkActivityIndicatorManager.m */,
+				D0CEAA10167EF3A0008536F6 /* AFNetworking.h */,
+				D0CEAA11167EF3A0008536F6 /* AFPropertyListRequestOperation.h */,
+				D0CEAA12167EF3A0008536F6 /* AFPropertyListRequestOperation.m */,
+				D0CEAA13167EF3A0008536F6 /* AFURLConnectionOperation.h */,
+				D0CEAA14167EF3A0008536F6 /* AFURLConnectionOperation.m */,
+				D0CEAA15167EF3A0008536F6 /* AFXMLRequestOperation.h */,
+				D0CEAA16167EF3A0008536F6 /* AFXMLRequestOperation.m */,
+				D0CEAA17167EF3A0008536F6 /* UIImageView+AFNetworking.h */,
+				D0CEAA18167EF3A0008536F6 /* UIImageView+AFNetworking.m */,
+			);
+			path = AFNetworking;
+			sourceTree = "<group>";
+		};
+		D0CEAA25167F081A008536F6 /* NetraCell */ = {
+			isa = PBXGroup;
+			children = (
+				D0CEAA26167F0891008536F6 /* NetraCell.h */,
+				D0CEAA27167F0891008536F6 /* NetraCell.m */,
+			);
+			path = NetraCell;
+			sourceTree = "<group>";
+		};
 		D0DF4716167CC168009838EB = {
 			isa = PBXGroup;
 			children = (
@@ -97,6 +192,8 @@
 		D0DF472B167CC168009838EB /* NetraFrameWork */ = {
 			isa = PBXGroup;
 			children = (
+				D0CEAA02167EF36F008536F6 /* controller */,
+				D0CEAA03167EF36F008536F6 /* model */,
 				D0DF474F167CC241009838EB /* Library */,
 				D0DF4748167CC201009838EB /* view */,
 				D0DF4734167CC168009838EB /* NetraAppDelegate.h */,
@@ -133,8 +230,9 @@
 		D0DF4749167CC201009838EB /* viewcontroller */ = {
 			isa = PBXGroup;
 			children = (
-				D0DF474A167CC201009838EB /* NetraViewController.h */,
-				D0DF474B167CC201009838EB /* NetraViewController.m */,
+				D0CEA9FD167EF14F008536F6 /* NetraViewController.h */,
+				D0CEA9FE167EF14F008536F6 /* NetraViewController.m */,
+				D0CEA9FF167EF14F008536F6 /* NetraViewController.xib */,
 			);
 			path = viewcontroller;
 			sourceTree = "<group>";
@@ -142,6 +240,8 @@
 		D0DF474F167CC241009838EB /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				D0CEAA25167F081A008536F6 /* NetraCell */,
+				D0CEAA05167EF3A0008536F6 /* AFNetworking */,
 				D0DF4750167CC241009838EB /* SidePanel */,
 			);
 			path = Library;
@@ -232,6 +332,7 @@
 				D0DF4738167CC168009838EB /* Default.png in Resources */,
 				D0DF473A167CC168009838EB /* Default@2x.png in Resources */,
 				D0DF473C167CC168009838EB /* Default-568h@2x.png in Resources */,
+				D0CEAA01167EF14F008536F6 /* NetraViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,11 +345,22 @@
 			files = (
 				D0DF4732167CC168009838EB /* main.m in Sources */,
 				D0DF4736167CC168009838EB /* NetraAppDelegate.m in Sources */,
-				D0DF474D167CC201009838EB /* NetraViewController.m in Sources */,
 				D0DF4755167CC241009838EB /* JASidePanelController.m in Sources */,
 				D0DF4756167CC241009838EB /* UIViewController+JASidePanel.m in Sources */,
 				D0DF475D167CC4D6009838EB /* RightViewController.m in Sources */,
 				D0DF4768167CCC53009838EB /* LeftViewController.m in Sources */,
+				D0CEAA00167EF14F008536F6 /* NetraViewController.m in Sources */,
+				D0CEAA19167EF3A0008536F6 /* AFHTTPClient.m in Sources */,
+				D0CEAA1A167EF3A0008536F6 /* AFHTTPRequestOperation.m in Sources */,
+				D0CEAA1B167EF3A0008536F6 /* AFImageRequestOperation.m in Sources */,
+				D0CEAA1C167EF3A0008536F6 /* AFJSONRequestOperation.m in Sources */,
+				D0CEAA1D167EF3A0008536F6 /* AFNetworkActivityIndicatorManager.m in Sources */,
+				D0CEAA1E167EF3A0008536F6 /* AFPropertyListRequestOperation.m in Sources */,
+				D0CEAA1F167EF3A0008536F6 /* AFURLConnectionOperation.m in Sources */,
+				D0CEAA20167EF3A0008536F6 /* AFXMLRequestOperation.m in Sources */,
+				D0CEAA21167EF3A0008536F6 /* UIImageView+AFNetworking.m in Sources */,
+				D0CEAA24167EF455008536F6 /* NetraObject.m in Sources */,
+				D0CEAA28167F0891008536F6 /* NetraCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,6 +467,7 @@
 				D0DF4747167CC168009838EB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
