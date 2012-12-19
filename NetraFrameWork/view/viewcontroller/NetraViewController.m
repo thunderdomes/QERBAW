@@ -89,8 +89,18 @@
 	}
 	cell.title.text=dataObject.title;
 	cell.excerpt.text=dataObject.excerpt;
+	if(dataObject.thumbnail){
+		cell.thumbnail.frame=CGRectMake(240, 5, 75, 75);
+	}
 	[cell.thumbnail setImageWithURL:[NSURL URLWithString:dataObject.thumbnail]
                    placeholderImage:[UIImage imageNamed:@"Default-picture-alt"]];
+	cell.title.frame=CGRectMake(5, 5, 230, 0);
+	cell.title.backgroundColor=[UIColor clearColor];
+	[cell.title sizeToFit];
+	cell.excerpt.frame=CGRectMake(5,cell.title.bounds.size.height+10, 230, 40);
+	//[excerpt sizeToFit];
+	cell.excerpt.backgroundColor=[UIColor clearColor];
+
 	return cell;
 }
 

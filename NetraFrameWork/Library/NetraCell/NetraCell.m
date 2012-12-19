@@ -7,6 +7,7 @@
 //
 
 #import "NetraCell.h"
+#import <QuartzCore/QuartzCore.h>
 
 @implementation NetraCell
 @synthesize title;
@@ -18,27 +19,29 @@
     if (self) {
 		title=[[UILabel alloc]init];
 		title.backgroundColor=[UIColor clearColor];
-		title.frame=CGRectMake(90, 5, 230, 50);
-		title.numberOfLines=2;
+		
+		title.numberOfLines=0;
+		title.lineBreakMode=NSLineBreakByWordWrapping;
 		//title.font=[UIFont fontWithName:@"HelveticaNeue-CondensedBlack" size:18];
-		[title setFont:[UIFont fontWithName:@"OpenSans-Bold" size:20]];
+		[title setFont:[UIFont fontWithName:@"OpenSans-Bold" size:17]];
 		
 		excerpt=[[UILabel alloc]init];
 		excerpt.backgroundColor=[UIColor clearColor];
-		excerpt.frame=CGRectMake(90,50, 230, 100);
-		excerpt.numberOfLines=4;
-		excerpt.font=[UIFont fontWithName:@"HelveticaNeue" size:14];
+	
+		excerpt.numberOfLines=3;
+		excerpt.font=[UIFont fontWithName:@"OpenSans" size:14];
 		excerpt.textAlignment=NSTextAlignmentLeft;
 		
-		thumbnail=[[UIImageView alloc]initWithFrame:CGRectMake(5, 5, 75, 75)];
-		
-		
+		thumbnail=[[UIImageView alloc]init];
+		thumbnail.layer.cornerRadius=5;
+		thumbnail.layer.masksToBounds = YES;
+		thumbnail.layer.shouldRasterize= YES;
 
     }
 	[self.contentView addSubview:title];
 	[self.contentView addSubview:excerpt];
 	[self.contentView addSubview:thumbnail];
-
+	
     return self;
 }
 
@@ -48,6 +51,9 @@
 
     // Configure the view for the selected state
 }
-
+- (void)layoutSubviews {
+	
+    [super layoutSubviews];
+	}
 
 @end
