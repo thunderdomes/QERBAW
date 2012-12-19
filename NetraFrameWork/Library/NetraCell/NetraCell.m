@@ -20,7 +20,8 @@
 		title.backgroundColor=[UIColor clearColor];
 		title.frame=CGRectMake(90, 5, 230, 50);
 		title.numberOfLines=2;
-		title.font=[UIFont fontWithName:@"HelveticaNeue-CondensedBlack" size:18];
+		//title.font=[UIFont fontWithName:@"HelveticaNeue-CondensedBlack" size:18];
+		[title setFont:[UIFont fontWithName:@"OpenSans-Bold" size:20]];
 		
 		excerpt=[[UILabel alloc]init];
 		excerpt.backgroundColor=[UIColor clearColor];
@@ -37,6 +38,7 @@
 	[self.contentView addSubview:title];
 	[self.contentView addSubview:excerpt];
 	[self.contentView addSubview:thumbnail];
+
     return self;
 }
 
@@ -46,5 +48,6 @@
 
     // Configure the view for the selected state
 }
+
 
 @end

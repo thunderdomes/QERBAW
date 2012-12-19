@@ -28,6 +28,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+	NSLog(@"Available Font Families: %@", [UIFont familyNames]);
 	self.netraMutableArray=[NSMutableArray array];
 	[self fetchJson];
     // Do any additional setup after loading the view from its nib.

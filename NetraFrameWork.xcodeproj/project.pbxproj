@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D0C139801681E34000A10E6F /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D0C1397C1681E0E100A10E6F /* OpenSans-Bold.ttf */; };
+		D0C139811681E34000A10E6F /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D0C1397D1681E0E100A10E6F /* OpenSans-Light.ttf */; };
+		D0C139821681E34000A10E6F /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D0C1397E1681E0E100A10E6F /* OpenSans-Regular.ttf */; };
+		D0C139831681E34000A10E6F /* OpenSans-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D0C1397F1681E0E100A10E6F /* OpenSans-Semibold.ttf */; };
 		D0CEAA00167EF14F008536F6 /* NetraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0CEA9FE167EF14F008536F6 /* NetraViewController.m */; };
 		D0CEAA01167EF14F008536F6 /* NetraViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0CEA9FF167EF14F008536F6 /* NetraViewController.xib */; };
 		D0CEAA19167EF3A0008536F6 /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = D0CEAA07167EF3A0008536F6 /* AFHTTPClient.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
@@ -37,6 +41,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D0C1397C1681E0E100A10E6F /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
+		D0C1397D1681E0E100A10E6F /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Light.ttf"; sourceTree = "<group>"; };
+		D0C1397E1681E0E100A10E6F /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
+		D0C1397F1681E0E100A10E6F /* OpenSans-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Semibold.ttf"; sourceTree = "<group>"; };
 		D0CEA9FD167EF14F008536F6 /* NetraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetraViewController.h; sourceTree = "<group>"; };
 		D0CEA9FE167EF14F008536F6 /* NetraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetraViewController.m; sourceTree = "<group>"; };
 		D0CEA9FF167EF14F008536F6 /* NetraViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NetraViewController.xib; sourceTree = "<group>"; };
@@ -102,6 +110,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D0C1397A1681E0D800A10E6F /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				D0C1397C1681E0E100A10E6F /* OpenSans-Bold.ttf */,
+				D0C1397D1681E0E100A10E6F /* OpenSans-Light.ttf */,
+				D0C1397E1681E0E100A10E6F /* OpenSans-Regular.ttf */,
+				D0C1397F1681E0E100A10E6F /* OpenSans-Semibold.ttf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
 		D0CEAA02167EF36F008536F6 /* controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -240,6 +259,7 @@
 		D0DF474F167CC241009838EB /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				D0C1397A1681E0D800A10E6F /* Font */,
 				D0CEAA25167F081A008536F6 /* NetraCell */,
 				D0CEAA05167EF3A0008536F6 /* AFNetworking */,
 				D0DF4750167CC241009838EB /* SidePanel */,
@@ -328,6 +348,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0C139801681E34000A10E6F /* OpenSans-Bold.ttf in Resources */,
+				D0C139811681E34000A10E6F /* OpenSans-Light.ttf in Resources */,
+				D0C139821681E34000A10E6F /* OpenSans-Regular.ttf in Resources */,
+				D0C139831681E34000A10E6F /* OpenSans-Semibold.ttf in Resources */,
 				D0DF4730167CC168009838EB /* InfoPlist.strings in Resources */,
 				D0DF4738167CC168009838EB /* Default.png in Resources */,
 				D0DF473A167CC168009838EB /* Default@2x.png in Resources */,
