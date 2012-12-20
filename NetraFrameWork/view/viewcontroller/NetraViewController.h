@@ -11,6 +11,8 @@
 @interface NetraViewController : UIViewController< UITableViewDelegate,UITableViewDataSource>{
 
 	IBOutlet UITableView *NetraTableViewController;
+	NSInteger current_page;
+	NSInteger total_page;
 	
 }
 @property(nonatomic,retain) NSMutableArray *netraMutableArray;

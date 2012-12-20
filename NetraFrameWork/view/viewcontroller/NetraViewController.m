@@ -10,6 +10,7 @@
 #import "NetraObject.h"
 #import "AFNetworking.h"
 #import "NetraCell.h"
+const int kLoadingCellTag = 1273;
 @interface NetraViewController ()
 
 @end
@@ -21,6 +22,8 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         self.title=@"Travel Editor Desk";
+		current_page=1;
+		self.netraMutableArray=[NSMutableArray array];
     }
     return self;
 }
@@ -29,12 +32,13 @@
 {
     [super viewDidLoad];
 	NSLog(@"Available Font Families: %@", [UIFont familyNames]);
-	self.netraMutableArray=[NSMutableArray array];
+	
 	[self fetchJson];
     // Do any additional setup after loading the view from its nib.
 }
 -(void)fetchJson{
-	NSString *baseUrl=[NSString stringWithFormat:@"http://www.wego.co.id/berita/v1/api/get_recent_posts?json=1&count=10&page=1"];
+	NSLog(@"PAGIng now--->%d",current_page);
+	NSString *baseUrl=[NSString stringWithFormat:@"http://www.wego.co.id/berita/v1/api/get_recent_posts?json=1&count=10&page=%d",current_page];
 	
 	NSURL *URL=[NSURL URLWithString:baseUrl];
 	NSLog(@"URL-->%@",baseUrl);
@@ -42,20 +46,28 @@
 	AFJSONRequestOperation *operation=[[AFJSONRequestOperation alloc] initWithRequest:request];
 	
 	[operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
-		
+		total_page=[[responseObject objectForKey:@"pages"]intValue];
 		for(id netraDictionary in [responseObject objectForKey:@"posts"]){
 			NetraObject *NetraObjectData=[[NetraObject alloc] initWithDictionary:netraDictionary];
-			[self.netraMutableArray addObject:NetraObjectData];
-			[NetraObjectData release];
-			[NetraTableViewController reloadData];
+			if (![self.netraMutableArray containsObject:NetraObjectData]) {
+                [self.netraMutableArray addObject:NetraObjectData];
+            }
 			
+			[NetraObjectData release];
+			
+			//NSLog(@"self.netraMutableArray.count--->%d",[self.netraMutableArray count]);
 			
 		}
 		
-		//[self loadSearchBox];
+		[NetraTableViewController reloadData];
 	} failure:^(AFHTTPRequestOperation *operation, NSError *error) {
 		if(error){
-			[UIApplication sharedApplication].networkActivityIndicatorVisible=NO;
+			NSLog(@"Error: %@", [error localizedDescription]);
+			[[[[UIAlertView alloc] initWithTitle:@"Error fetching beers!"
+										 message:@"Please try again later"
+										delegate:nil
+							   cancelButtonTitle:@"OK"
+							   otherButtonTitles:nil] autorelease] show];
 			
 		}
 	}];
@@ -73,16 +85,37 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
 	
-    return [self.netraMutableArray count];
+	if (current_page == 0) {
+        return 1;
+    }
+    
+    if (current_page < total_page) {
+        return self.netraMutableArray.count + 1;
+    }
+	
+    return self.netraMutableArray.count;
 	
 }
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
     cell.backgroundColor = [UIColor colorWithRed:0.957 green:0.957 blue:0.957 alpha:1];
+	
+		if (cell.tag == kLoadingCellTag) {
+			current_page++;
+				[self fetchJson];
+		}
+
 }
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-	
-	NetraCell *cell       = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
+	if (indexPath.row < self.netraMutableArray.count) {
+        return [self NetraCellForIndexPath:indexPath];
+    } else {
+        return [self loadingCell];
+    }
+}
+- (UITableViewCell *)NetraCellForIndexPath:(NSIndexPath *)indexPath {
+	NetraCell *cell       = [NetraTableViewController dequeueReusableCellWithIdentifier:@"Cell"];
 	NetraObject *dataObject=[self.netraMutableArray objectAtIndex:indexPath.row];
 	if (cell == nil)
 	{
@@ -91,31 +124,34 @@
 	}
 	cell.title.text=dataObject.title;
 	cell.excerpt.text=dataObject.excerpt;
-	if(dataObject.thumbnail){
-		cell.thumbnail.frame=CGRectMake(235, 10, 75, 75);
-		[cell.thumbnail setImageWithURL:[NSURL URLWithString:dataObject.thumbnail]
-					   placeholderImage:[UIImage imageNamed:@"placeholder.jpg"]];
-		cell.title.frame=CGRectMake(5, 5, 230, 0);
-		cell.title.backgroundColor=[UIColor clearColor];
-		[cell.title sizeToFit];
-		cell.excerpt.frame=CGRectMake(5,cell.title.bounds.size.height+10, 230, 40);
-		//[excerpt sizeToFit];
-		cell.excerpt.backgroundColor=[UIColor clearColor];
-
-	}
-	else{
-		cell.title.frame=CGRectMake(5, 5, 300, 0);
-		cell.title.backgroundColor=[UIColor clearColor];
-		[cell.title sizeToFit];
-		cell.excerpt.frame=CGRectMake(5,cell.title.bounds.size.height+10, 300, 40);
-		//[excerpt sizeToFit];
-		cell.excerpt.backgroundColor=[UIColor clearColor];
-	}
-	
+	cell.title.frame=CGRectMake(5, 5, 230, 0);
+	cell.title.backgroundColor=[UIColor clearColor];
+	[cell.title sizeToFit];
+	cell.excerpt.frame=CGRectMake(5,cell.title.bounds.size.height+10, 230, 40);
+	//[excerpt sizeToFit];
 		
 	
 	return cell;
+
+
 }
+- (UITableViewCell *)loadingCell {
+    UITableViewCell *cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
+													reuseIdentifier:nil] autorelease];
+    
+    UIActivityIndicatorView *activityIndicator = [[UIActivityIndicatorView alloc]
+                                                  initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+    activityIndicator.center = cell.center;
+    [cell addSubview:activityIndicator];
+    [activityIndicator release];
+    
+    [activityIndicator startAnimating];
+     cell.tag = kLoadingCellTag;
+    
+    return cell;
+}
+
+
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -123,8 +159,14 @@
 	/* statements here */
 	
 }
+
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath;
 {
+	if(indexPath.row ==([self.netraMutableArray count]))
+	{
+		return 44;
+	}
+
 	return 150;
 }
 - (void)didReceiveMemoryWarning

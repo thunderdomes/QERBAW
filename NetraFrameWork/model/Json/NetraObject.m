@@ -24,7 +24,7 @@
 		self.id_post=[dictionary objectForKey:@"id"];
 		self.title=[dictionary objectForKey:@"title"];
 		self.excerpt=[dictionary objectForKey:@"excerpt"];
-		self.thumbnail=[[[[[dictionary objectForKey:@"attachments"] objectAtIndex:0]objectForKey:@"images"]objectForKey:@"thumbnail"]objectForKey:@"url"];
+		//self.thumbnail=[[[[[dictionary objectForKey:@"attachments"] objectAtIndex:0]objectForKey:@"images"]objectForKey:@"thumbnail"]objectForKey:@"url"];
 		/*
 		self.thumbnail=[[[[dictionary objectForKey:@"attachments"]objectForKey:@"image"]objectForKey:@"thumbnail"]objectForKey:@"url"];
 		 */
