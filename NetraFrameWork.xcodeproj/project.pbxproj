@@ -37,6 +37,7 @@
 		D0A4EA091682BA290062A493 /* MagicalRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = D0A4E9ED1682BA280062A493 /* MagicalRecord.m */; };
 		D0A4EA121682BC6A0062A493 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0A4EA101682BC3F0062A493 /* CoreData.framework */; };
 		D0A4EA131682BC6A0062A493 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0A4EA0E1682BC360062A493 /* SystemConfiguration.framework */; };
+		D0A4EA1F168346D70062A493 /* Netra.m in Sources */ = {isa = PBXBuildFile; fileRef = D0A4EA1E168346D70062A493 /* Netra.m */; };
 		D0C139801681E34000A10E6F /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D0C1397C1681E0E100A10E6F /* OpenSans-Bold.ttf */; };
 		D0C139811681E34000A10E6F /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D0C1397D1681E0E100A10E6F /* OpenSans-Light.ttf */; };
 		D0C139821681E34000A10E6F /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D0C1397E1681E0E100A10E6F /* OpenSans-Regular.ttf */; };
@@ -128,6 +129,8 @@
 		D0A4E9EF1682BA280062A493 /* CoreData+MagicalRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CoreData+MagicalRecord.h"; sourceTree = "<group>"; };
 		D0A4EA0E1682BC360062A493 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		D0A4EA101682BC3F0062A493 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		D0A4EA1D168346D70062A493 /* Netra.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Netra.h; path = Netra/Netra.h; sourceTree = "<group>"; };
+		D0A4EA1E168346D70062A493 /* Netra.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Netra.m; path = Netra/Netra.m; sourceTree = "<group>"; };
 		D0C1397C1681E0E100A10E6F /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
 		D0C1397D1681E0E100A10E6F /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Light.ttf"; sourceTree = "<group>"; };
 		D0C1397E1681E0E100A10E6F /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
@@ -464,6 +467,8 @@
 				D0CEAA25167F081A008536F6 /* NetraCell */,
 				D0CEAA05167EF3A0008536F6 /* AFNetworking */,
 				D0DF4750167CC241009838EB /* SidePanel */,
+				D0A4EA1D168346D70062A493 /* Netra.h */,
+				D0A4EA1E168346D70062A493 /* Netra.m */,
 			);
 			path = Library;
 			sourceTree = "<group>";
@@ -613,6 +618,7 @@
 				D0A4EA071682BA290062A493 /* MagicalRecord+Setup.m in Sources */,
 				D0A4EA081682BA290062A493 /* MagicalRecord+ShorthandSupport.m in Sources */,
 				D0A4EA091682BA290062A493 /* MagicalRecord.m in Sources */,
+				D0A4EA1F168346D70062A493 /* Netra.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

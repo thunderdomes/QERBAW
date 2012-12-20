@@ -7,7 +7,7 @@
 //
 
 #import "NetraObject.h"
-
+#import "Netra.h"
 @implementation NetraObject
 @synthesize title=_title;
 @synthesize categories=_categories;
@@ -20,34 +20,20 @@
 -(id)initWithDictionary:(NSDictionary *)dictionary{
 	self=[super init];
 	if(self){
-
+		
+		
 		self.id_post=[dictionary objectForKey:@"id"];
-		self.title=[dictionary objectForKey:@"title"];
-		self.excerpt=[dictionary objectForKey:@"excerpt"];
-		//self.thumbnail=[[[[[dictionary objectForKey:@"attachments"] objectAtIndex:0]objectForKey:@"images"]objectForKey:@"thumbnail"]objectForKey:@"url"];
-		/*
-		self.thumbnail=[[[[dictionary objectForKey:@"attachments"]objectForKey:@"image"]objectForKey:@"thumbnail"]objectForKey:@"url"];
-		 */
+		self.title=[[dictionary objectForKey:@"title"] gtm_stringByUnescapingFromHTML];
+		self.excerpt=[[dictionary objectForKey:@"excerpt"]gtm_stringByUnescapingFromHTML];
+		self.thumbnail=[dictionary objectForKey:@"thumbnail"];
+	
 		self.categories_id=[[[dictionary objectForKey:@"categories"]objectAtIndex:0]objectForKey:@"title"];
-		//self.categories=[[dictionary objectForKey:@"categories"]objectForKey:@"title"];
-		
-		//self.offer=[dictionary objectForKey:@"offer"];
-		
+				
 	}
 	return self;
 	
 }
-/*
- -(BOOL)isEqual:(id)object{
- if(![object isKindOfClass:[NetraDealsObject class]])
- {
- 
- return NO;
- }
- NetraDealsObject *other=(NetraDealsObject*)object;
- return other.headline;
- }
- */
+
 -(void) dealloc{
 	
 	

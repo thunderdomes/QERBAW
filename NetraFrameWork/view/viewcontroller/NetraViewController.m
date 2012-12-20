@@ -31,17 +31,17 @@ const int kLoadingCellTag = 1273;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	NSLog(@"Available Font Families: %@", [UIFont familyNames]);
+	
 	
 	[self fetchJson];
     // Do any additional setup after loading the view from its nib.
 }
 -(void)fetchJson{
-	NSLog(@"PAGIng now--->%d",current_page);
+
 	NSString *baseUrl=[NSString stringWithFormat:@"http://www.wego.co.id/berita/v1/api/get_recent_posts?json=1&count=10&page=%d",current_page];
 	
 	NSURL *URL=[NSURL URLWithString:baseUrl];
-	NSLog(@"URL-->%@",baseUrl);
+
 	NSMutableURLRequest *request=[[NSMutableURLRequest alloc] initWithURL:URL cachePolicy:NSURLRequestReloadIgnoringCacheData timeoutInterval:60];
 	AFJSONRequestOperation *operation=[[AFJSONRequestOperation alloc] initWithRequest:request];
 	
@@ -63,7 +63,7 @@ const int kLoadingCellTag = 1273;
 	} failure:^(AFHTTPRequestOperation *operation, NSError *error) {
 		if(error){
 			NSLog(@"Error: %@", [error localizedDescription]);
-			[[[[UIAlertView alloc] initWithTitle:@"Error fetching beers!"
+			[[[[UIAlertView alloc] initWithTitle:@"Error fetching Netra!"
 										 message:@"Please try again later"
 										delegate:nil
 							   cancelButtonTitle:@"OK"
@@ -129,7 +129,31 @@ const int kLoadingCellTag = 1273;
 	[cell.title sizeToFit];
 	cell.excerpt.frame=CGRectMake(5,cell.title.bounds.size.height+10, 230, 40);
 	//[excerpt sizeToFit];
+	cell.excerpt.backgroundColor=[UIColor clearColor];
+
+	if(dataObject.thumbnail){
+		cell.thumbnail.frame=CGRectMake(235, 10, 75, 75);
+		[cell.thumbnail setImageWithURL:[NSURL URLWithString:dataObject.thumbnail]
+					   placeholderImage:[UIImage imageNamed:@"placeholder.jpg"]];
+		cell.title.frame=CGRectMake(5, 5, 220, 0);
+		cell.title.backgroundColor=[UIColor clearColor];
+		[cell.title sizeToFit];
+		cell.excerpt.frame=CGRectMake(5,cell.title.bounds.size.height+10, 230, 40);
+		//[excerpt sizeToFit];
+		cell.excerpt.backgroundColor=[UIColor clearColor];
 		
+	}
+	else{
+		cell.title.frame=CGRectMake(5, 5, 300, 0);
+		cell.title.backgroundColor=[UIColor clearColor];
+		[cell.title sizeToFit];
+		cell.thumbnail.frame=CGRectMake(0, 0, 0, 0);
+		cell.excerpt.frame=CGRectMake(5,cell.title.bounds.size.height+10, 300, 40);
+		//[excerpt sizeToFit];
+		cell.excerpt.backgroundColor=[UIColor clearColor];
+	}
+	
+	
 	
 	return cell;
 
@@ -156,6 +180,7 @@ const int kLoadingCellTag = 1273;
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [[tableView cellForRowAtIndexPath:indexPath] setSelected:NO animated:YES];
+	NSLog(@"indexPath.row -->%d",indexPath.row );
 	/* statements here */
 	
 }
