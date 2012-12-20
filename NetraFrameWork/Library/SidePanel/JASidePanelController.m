@@ -417,9 +417,9 @@ static char ja_kvoContext;
                 buttonController = [nav.viewControllers objectAtIndex:0];
             }
         }
-        if (!buttonController.navigationItem.leftBarButtonItem) {
-            buttonController.navigationItem.leftBarButtonItem = [self leftButtonForCenterPanel];
-        }
+      //  if (!buttonController.navigationItem.leftBarButtonItem) {
+        //    buttonController.navigationItem.leftBarButtonItem = [self leftButtonForCenterPanel];
+       // }
     }	
 }
 
