@@ -186,9 +186,7 @@ const int kLoadingCellTag = 1273;
 {
     [[tableView cellForRowAtIndexPath:indexPath] setSelected:NO animated:YES];
 	NSLog(@"indexPath.row -->%d",indexPath.row );
-	NetraObject *dataObject=[self.netraMutableArray objectAtIndex:indexPath.row];
-	NSString *text = dataObject.title;
-	NSLog(@"cell--->%@",text);
+	
 	/* statements here */
 	
 }
@@ -201,7 +199,11 @@ const int kLoadingCellTag = 1273;
 	
 	}
 	NetraObject *dataObject=[self.netraMutableArray objectAtIndex:indexPath.row];
-	NSLog(@"data object--->%@",dataObject.title);
+	NetraCell *cell       = [NetraTableViewController dequeueReusableCellWithIdentifier:@"Cell"];
+	 CGSize constraint = CGSizeMake(CELL_CONTENT_WIDTH - (CELL_CONTENT_MARGIN * 2), 20000.0f);
+	CGSize size = [dataObject.title sizeWithFont:[UIFont systemFontOfSize:FONT_SIZE] constrainedToSize:constraint lineBreakMode:NSLineBreakByCharWrapping];
+	NSLog(@"cgsize--->%f",size.width);
+	NSLog(@"cgsize--->%f",size.height);
 	return 160;
 }
 
