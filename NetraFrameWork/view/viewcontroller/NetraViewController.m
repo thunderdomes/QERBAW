@@ -48,8 +48,8 @@
 			[self.netraMutableArray addObject:NetraObjectData];
 			[NetraObjectData release];
 			[NetraTableViewController reloadData];
-		
-		
+			
+			
 		}
 		
 		//[self loadSearchBox];
@@ -76,7 +76,9 @@
     return [self.netraMutableArray count];
 	
 }
-
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+    cell.backgroundColor = [UIColor colorWithRed:0.957 green:0.957 blue:0.957 alpha:1];
+}
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
 	
@@ -90,17 +92,28 @@
 	cell.title.text=dataObject.title;
 	cell.excerpt.text=dataObject.excerpt;
 	if(dataObject.thumbnail){
-		cell.thumbnail.frame=CGRectMake(240, 5, 75, 75);
-	}
-	[cell.thumbnail setImageWithURL:[NSURL URLWithString:dataObject.thumbnail]
-                   placeholderImage:[UIImage imageNamed:@"Default-picture-alt"]];
-	cell.title.frame=CGRectMake(5, 5, 230, 0);
-	cell.title.backgroundColor=[UIColor clearColor];
-	[cell.title sizeToFit];
-	cell.excerpt.frame=CGRectMake(5,cell.title.bounds.size.height+10, 230, 40);
-	//[excerpt sizeToFit];
-	cell.excerpt.backgroundColor=[UIColor clearColor];
+		cell.thumbnail.frame=CGRectMake(235, 10, 75, 75);
+		[cell.thumbnail setImageWithURL:[NSURL URLWithString:dataObject.thumbnail]
+					   placeholderImage:[UIImage imageNamed:@"placeholder.jpg"]];
+		cell.title.frame=CGRectMake(5, 5, 230, 0);
+		cell.title.backgroundColor=[UIColor clearColor];
+		[cell.title sizeToFit];
+		cell.excerpt.frame=CGRectMake(5,cell.title.bounds.size.height+10, 230, 40);
+		//[excerpt sizeToFit];
+		cell.excerpt.backgroundColor=[UIColor clearColor];
 
+	}
+	else{
+		cell.title.frame=CGRectMake(5, 5, 300, 0);
+		cell.title.backgroundColor=[UIColor clearColor];
+		[cell.title sizeToFit];
+		cell.excerpt.frame=CGRectMake(5,cell.title.bounds.size.height+10, 300, 40);
+		//[excerpt sizeToFit];
+		cell.excerpt.backgroundColor=[UIColor clearColor];
+	}
+	
+		
+	
 	return cell;
 }
 
