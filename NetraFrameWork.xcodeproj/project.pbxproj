@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D0877423168291DA0089533D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0877421168291B40089533D /* QuartzCore.framework */; };
 		D0C139801681E34000A10E6F /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D0C1397C1681E0E100A10E6F /* OpenSans-Bold.ttf */; };
 		D0C139811681E34000A10E6F /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D0C1397D1681E0E100A10E6F /* OpenSans-Light.ttf */; };
 		D0C139821681E34000A10E6F /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D0C1397E1681E0E100A10E6F /* OpenSans-Regular.ttf */; };
@@ -35,12 +36,12 @@
 		D0DF473C167CC168009838EB /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D0DF473B167CC168009838EB /* Default-568h@2x.png */; };
 		D0DF4755167CC241009838EB /* JASidePanelController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0DF4752167CC241009838EB /* JASidePanelController.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		D0DF4756167CC241009838EB /* UIViewController+JASidePanel.m in Sources */ = {isa = PBXBuildFile; fileRef = D0DF4754167CC241009838EB /* UIViewController+JASidePanel.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
-		D0DF4758167CC486009838EB /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0DF4757167CC486009838EB /* QuartzCore.framework */; };
 		D0DF475D167CC4D6009838EB /* RightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0DF475C167CC4D6009838EB /* RightViewController.m */; };
 		D0DF4768167CCC53009838EB /* LeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0DF4767167CCC53009838EB /* LeftViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D0877421168291B40089533D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		D0C1397C1681E0E100A10E6F /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
 		D0C1397D1681E0E100A10E6F /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Light.ttf"; sourceTree = "<group>"; };
 		D0C1397E1681E0E100A10E6F /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
@@ -88,7 +89,6 @@
 		D0DF4752167CC241009838EB /* JASidePanelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JASidePanelController.m; sourceTree = "<group>"; };
 		D0DF4753167CC241009838EB /* UIViewController+JASidePanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+JASidePanel.h"; sourceTree = "<group>"; };
 		D0DF4754167CC241009838EB /* UIViewController+JASidePanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+JASidePanel.m"; sourceTree = "<group>"; };
-		D0DF4757167CC486009838EB /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		D0DF475B167CC4D6009838EB /* RightViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RightViewController.h; sourceTree = "<group>"; };
 		D0DF475C167CC4D6009838EB /* RightViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RightViewController.m; sourceTree = "<group>"; };
 		D0DF4766167CCC53009838EB /* LeftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftViewController.h; sourceTree = "<group>"; };
@@ -100,7 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D0DF4758167CC486009838EB /* QuartzCore.framework in Frameworks */,
+				D0877423168291DA0089533D /* QuartzCore.framework in Frameworks */,
 				D0DF4726167CC168009838EB /* UIKit.framework in Frameworks */,
 				D0DF4728167CC168009838EB /* Foundation.framework in Frameworks */,
 				D0DF472A167CC168009838EB /* CoreGraphics.framework in Frameworks */,
@@ -183,7 +183,6 @@
 		D0DF4716167CC168009838EB = {
 			isa = PBXGroup;
 			children = (
-				D0DF4757167CC486009838EB /* QuartzCore.framework */,
 				D0DF472B167CC168009838EB /* NetraFrameWork */,
 				D0DF4724167CC168009838EB /* Frameworks */,
 				D0DF4722167CC168009838EB /* Products */,
@@ -201,6 +200,7 @@
 		D0DF4724167CC168009838EB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D0877421168291B40089533D /* QuartzCore.framework */,
 				D0DF4725167CC168009838EB /* UIKit.framework */,
 				D0DF4727167CC168009838EB /* Foundation.framework */,
 				D0DF4729167CC168009838EB /* CoreGraphics.framework */,
