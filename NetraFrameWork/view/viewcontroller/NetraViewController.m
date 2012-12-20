@@ -10,6 +10,11 @@
 #import "NetraObject.h"
 #import "AFNetworking.h"
 #import "NetraCell.h"
+
+#define FONT_SIZE 14.0f
+#define CELL_CONTENT_WIDTH 320.0f
+#define CELL_CONTENT_MARGIN 10.0f
+
 const int kLoadingCellTag = 1273;
 @interface NetraViewController ()
 
@@ -154,7 +159,7 @@ const int kLoadingCellTag = 1273;
 	}
 	
 	
-	
+	cell.frame=CGRectMake(0, 0, 320, 100);
 	return cell;
 
 
@@ -181,19 +186,26 @@ const int kLoadingCellTag = 1273;
 {
     [[tableView cellForRowAtIndexPath:indexPath] setSelected:NO animated:YES];
 	NSLog(@"indexPath.row -->%d",indexPath.row );
+	NetraObject *dataObject=[self.netraMutableArray objectAtIndex:indexPath.row];
+	NSString *text = dataObject.title;
+	NSLog(@"cell--->%@",text);
 	/* statements here */
 	
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath;
-{
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+	
 	if(indexPath.row ==([self.netraMutableArray count]))
 	{
 		return 44;
+	
 	}
-
-	return 150;
+	NetraObject *dataObject=[self.netraMutableArray objectAtIndex:indexPath.row];
+	NSLog(@"data object--->%@",dataObject.title);
+	return 160;
 }
+
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
