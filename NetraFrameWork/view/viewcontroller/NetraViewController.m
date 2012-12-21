@@ -11,9 +11,9 @@
 #import "AFNetworking.h"
 #import "NetraCell.h"
 
-#define FONT_SIZE 14.0f
+#define FONT_SIZE 17.0f
 #define CELL_CONTENT_WIDTH 320.0f
-#define CELL_CONTENT_MARGIN 10.0f
+#define CELL_CONTENT_MARGIN 5.0f
 
 const int kLoadingCellTag = 1273;
 @interface NetraViewController ()
@@ -140,10 +140,14 @@ const int kLoadingCellTag = 1273;
 		cell.thumbnail.frame=CGRectMake(235, 10, 75, 75);
 		[cell.thumbnail setImageWithURL:[NSURL URLWithString:dataObject.thumbnail]
 					   placeholderImage:[UIImage imageNamed:@"placeholder.jpg"]];
-		cell.title.frame=CGRectMake(5, 5, 220, 0);
-		cell.title.backgroundColor=[UIColor clearColor];
-		[cell.title sizeToFit];
-		cell.excerpt.frame=CGRectMake(5,cell.title.bounds.size.height+10, 230, 40);
+		
+
+		CGSize maxSize = CGSizeMake(200.0f, CGFLOAT_MAX);
+
+		//cell.title.backgroundColor=[UIColor clearColor];
+		[cell.title sizeThatFits:maxSize];
+		
+		cell.excerpt.frame=CGRectMake(5,cell.title.bounds.size.height+10, 220, 40);
 		//[excerpt sizeToFit];
 		cell.excerpt.backgroundColor=[UIColor clearColor];
 		
@@ -155,6 +159,7 @@ const int kLoadingCellTag = 1273;
 		cell.thumbnail.frame=CGRectMake(0, 0, 0, 0);
 		cell.excerpt.frame=CGRectMake(5,cell.title.bounds.size.height+10, 300, 40);
 		//[excerpt sizeToFit];
+	
 		cell.excerpt.backgroundColor=[UIColor clearColor];
 	}
 	
@@ -184,8 +189,7 @@ const int kLoadingCellTag = 1273;
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [[tableView cellForRowAtIndexPath:indexPath] setSelected:NO animated:YES];
-	NSLog(@"indexPath.row -->%d",indexPath.row );
+  
 	
 	/* statements here */
 	
@@ -198,13 +202,18 @@ const int kLoadingCellTag = 1273;
 		return 44;
 	
 	}
+	
 	NetraObject *dataObject=[self.netraMutableArray objectAtIndex:indexPath.row];
-	NetraCell *cell       = [NetraTableViewController dequeueReusableCellWithIdentifier:@"Cell"];
-	 CGSize constraint = CGSizeMake(CELL_CONTENT_WIDTH - (CELL_CONTENT_MARGIN * 2), 20000.0f);
-	CGSize size = [dataObject.title sizeWithFont:[UIFont systemFontOfSize:FONT_SIZE] constrainedToSize:constraint lineBreakMode:NSLineBreakByCharWrapping];
-	NSLog(@"cgsize--->%f",size.width);
-	NSLog(@"cgsize--->%f",size.height);
-	return 160;
+	if(dataObject.title.length <40){
+		return 110;
+	}
+	else{
+	CGSize constraint = CGSizeMake(248, 300);
+	CGSize size = [dataObject.title sizeWithFont:[UIFont systemFontOfSize:FONT_SIZE] constrainedToSize:constraint lineBreakMode:NSLineBreakByWordWrapping];
+	
+	return size.height+90;
+	}
+	
 }
 
 

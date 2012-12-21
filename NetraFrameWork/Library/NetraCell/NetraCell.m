@@ -22,6 +22,7 @@
 		
 		title.numberOfLines=0;
 		title.lineBreakMode=NSLineBreakByWordWrapping;
+		title.textAlignment=NSTextAlignmentLeft;
 		//title.font=[UIFont fontWithName:@"HelveticaNeue-CondensedBlack" size:18];
 		[title setFont:[UIFont fontWithName:@"OpenSans-Bold" size:17]];
 		
