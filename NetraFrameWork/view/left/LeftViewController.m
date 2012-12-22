@@ -19,6 +19,10 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
 		self.view.backgroundColor=[UIColor lightGrayColor];
+		[[NSNotificationCenter defaultCenter] addObserver:self
+												 selector:@selector(receiveTestNotification:)
+													 name:@"TestNotification"
+												   object:nil];
     }
     return self;
 }
@@ -28,7 +32,15 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
 }
-
+- (void) receiveTestNotification:(NSNotification *) notification
+{
+    // [notification name] should always be @"TestNotification"
+    // unless you use this method for observation of other notifications
+    // as well.
+	
+    if ([[notification name] isEqualToString:@"TestNotification"])
+        NSLog (@"Successfully received the test notification!");
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

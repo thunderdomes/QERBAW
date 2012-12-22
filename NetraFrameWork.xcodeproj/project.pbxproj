@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D06D985D168577D000DF5A6F /* detailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D06D985C168577D000DF5A6F /* detailViewController.m */; };
+		D06D98631685803600DF5A6F /* detailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D06D98621685803600DF5A6F /* detailViewController.m */; };
 		D0877423168291DA0089533D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0877421168291B40089533D /* QuartzCore.framework */; };
 		D0A4E95D1682B4400062A493 /* placeholder.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D0A4E95C1682B4400062A493 /* placeholder.jpg */; };
 		D0A4E9F01682BA280062A493 /* MagicalImportFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = D0A4E9B81682BA280062A493 /* MagicalImportFunctions.m */; };
@@ -72,8 +72,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		D06D985B168577D000DF5A6F /* detailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = detailViewController.h; sourceTree = "<group>"; };
-		D06D985C168577D000DF5A6F /* detailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = detailViewController.m; sourceTree = "<group>"; };
+		D06D98611685803600DF5A6F /* detailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = detailViewController.h; sourceTree = "<group>"; };
+		D06D98621685803600DF5A6F /* detailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = detailViewController.m; sourceTree = "<group>"; };
 		D0877421168291B40089533D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		D0A4E95C1682B4400062A493 /* placeholder.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = placeholder.jpg; sourceTree = "<group>"; };
 		D0A4E9B71682BA280062A493 /* MagicalImportFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MagicalImportFunctions.h; sourceTree = "<group>"; };
@@ -207,8 +207,8 @@
 		D06D9859168577AE00DF5A6F /* detail */ = {
 			isa = PBXGroup;
 			children = (
-				D06D985B168577D000DF5A6F /* detailViewController.h */,
-				D06D985C168577D000DF5A6F /* detailViewController.m */,
+				D06D98611685803600DF5A6F /* detailViewController.h */,
+				D06D98621685803600DF5A6F /* detailViewController.m */,
 			);
 			path = detail;
 			sourceTree = "<group>";
@@ -632,7 +632,7 @@
 				D0A4EA081682BA290062A493 /* MagicalRecord+ShorthandSupport.m in Sources */,
 				D0A4EA091682BA290062A493 /* MagicalRecord.m in Sources */,
 				D0A4EA1F168346D70062A493 /* Netra.m in Sources */,
-				D06D985D168577D000DF5A6F /* detailViewController.m in Sources */,
+				D06D98631685803600DF5A6F /* detailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

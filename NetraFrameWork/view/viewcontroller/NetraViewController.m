@@ -185,18 +185,15 @@ const int kLoadingCellTag = 1273;
     return cell;
 }
 
-- (void)viewDidAppear:(BOOL)animated
-{
-	 self.title=@"Travel Editor Desk";
-}
+
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
 	
 	netraDetail =[[detailViewController alloc]init];
-	[self setTitle:@"Back"];
+	[self setTitle:@"Your new back title"];
 	[self.navigationController pushViewController:netraDetail animated:YES];
-	[netraDetail release];
+	
 	
 	/* statements here */
 	

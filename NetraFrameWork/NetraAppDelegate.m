@@ -33,6 +33,9 @@
 	self.viewController.leftPanel = [[LeftViewController alloc] init];
 	self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
+	[[NSNotificationCenter defaultCenter]
+	 postNotificationName:@"TestNotification"
+	 object:self];
     return YES;
 }
 
