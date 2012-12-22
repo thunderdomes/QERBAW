@@ -20,12 +20,12 @@
 		title=[[UILabel alloc]init];
 		title.backgroundColor=[UIColor clearColor];
 		
-		title.numberOfLines=0;
+		title.numberOfLines=3;
 		title.lineBreakMode=NSLineBreakByWordWrapping;
 		title.textAlignment=NSTextAlignmentLeft;
 		//title.font=[UIFont fontWithName:@"HelveticaNeue-CondensedBlack" size:18];
 		[title setFont:[UIFont fontWithName:@"OpenSans-Bold" size:17]];
-		
+		[title sizeToFit]; 
 		excerpt=[[UILabel alloc]init];
 		excerpt.backgroundColor=[UIColor clearColor];
 	

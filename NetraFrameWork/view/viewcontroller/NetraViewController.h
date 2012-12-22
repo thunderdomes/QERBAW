@@ -7,12 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "detailViewController.h"
 @interface NetraViewController : UIViewController< UITableViewDelegate,UITableViewDataSource>{
 
 	IBOutlet UITableView *NetraTableViewController;
 	NSInteger current_page;
 	NSInteger total_page;
+	detailViewController *netraDetail;
 	
 }
 @property(nonatomic,retain) NSMutableArray *netraMutableArray;
