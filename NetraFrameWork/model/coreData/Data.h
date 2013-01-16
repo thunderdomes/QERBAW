@@ -12,10 +12,10 @@
 
 @interface Data : NSManagedObject
 
-@property (nonatomic, retain) NSNumber * id_post;
+@property (nonatomic, retain) NSString * id_post;
 @property (nonatomic, retain) NSString * title;
 @property (nonatomic, retain) NSDate * date;
-@property (nonatomic, retain) NSNumber * categories;
+@property (nonatomic, retain) NSString * categories;
 @property (nonatomic, retain) NSString * excerpt;
 
 @end

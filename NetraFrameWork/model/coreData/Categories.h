@@ -12,7 +12,7 @@
 
 @interface Categories : NSManagedObject
 
-@property (nonatomic, retain) NSNumber * id_categories;
+@property (nonatomic, retain) NSString * id_categories;
 @property (nonatomic, retain) NSString * name_of;
 
 @end

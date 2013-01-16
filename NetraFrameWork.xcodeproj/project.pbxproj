@@ -11,6 +11,7 @@
 		D0443CDE16A6681C000FC13A /* Netra.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D0443CDC16A6681C000FC13A /* Netra.xcdatamodeld */; };
 		D0443CE116A66900000FC13A /* Categories.m in Sources */ = {isa = PBXBuildFile; fileRef = D0443CE016A66900000FC13A /* Categories.m */; };
 		D0443CE416A6690F000FC13A /* Data.m in Sources */ = {isa = PBXBuildFile; fileRef = D0443CE316A6690E000FC13A /* Data.m */; };
+		D0443CE716A68130000FC13A /* NetraObjectCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = D0443CE616A68130000FC13A /* NetraObjectCategory.m */; };
 		D06D98631685803600DF5A6F /* detailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D06D98621685803600DF5A6F /* detailViewController.m */; };
 		D0877423168291DA0089533D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0877421168291B40089533D /* QuartzCore.framework */; };
 		D0A4E95D1682B4400062A493 /* placeholder.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D0A4E95C1682B4400062A493 /* placeholder.jpg */; };
@@ -82,6 +83,8 @@
 		D0443CE016A66900000FC13A /* Categories.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Categories.m; sourceTree = "<group>"; };
 		D0443CE216A6690E000FC13A /* Data.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Data.h; sourceTree = "<group>"; };
 		D0443CE316A6690E000FC13A /* Data.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Data.m; sourceTree = "<group>"; };
+		D0443CE516A68130000FC13A /* NetraObjectCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetraObjectCategory.h; sourceTree = "<group>"; };
+		D0443CE616A68130000FC13A /* NetraObjectCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetraObjectCategory.m; sourceTree = "<group>"; };
 		D06D98611685803600DF5A6F /* detailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = detailViewController.h; sourceTree = "<group>"; };
 		D06D98621685803600DF5A6F /* detailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = detailViewController.m; sourceTree = "<group>"; };
 		D0877421168291B40089533D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -217,6 +220,8 @@
 			children = (
 				D0443CD716A667F7000FC13A /* NetraObject.h */,
 				D0443CD816A667F7000FC13A /* NetraObject.m */,
+				D0443CE516A68130000FC13A /* NetraObjectCategory.h */,
+				D0443CE616A68130000FC13A /* NetraObjectCategory.m */,
 			);
 			path = Json;
 			sourceTree = "<group>";
@@ -657,6 +662,7 @@
 				D0443CDE16A6681C000FC13A /* Netra.xcdatamodeld in Sources */,
 				D0443CE116A66900000FC13A /* Categories.m in Sources */,
 				D0443CE416A6690F000FC13A /* Data.m in Sources */,
+				D0443CE716A68130000FC13A /* NetraObjectCategory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

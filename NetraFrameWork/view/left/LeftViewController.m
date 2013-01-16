@@ -8,12 +8,14 @@
 
 #import "LeftViewController.h"
 #import "AFNetworking.h"
+#import "NetraObjectCategory.h"
+#import "Categories.h"
 @interface LeftViewController ()
 
 @end
 
 @implementation LeftViewController
-
+@synthesize netraMutableArrayCategory=_netraMutableArrayCategory;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -29,11 +31,24 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+	self.netraMutableArrayCategory=[NSMutableArray array];
 	// Do any additional setup after loading the view.
 }
 
+-(void)initCategory{
+	NSArray *data=[Categories MR_findAll];
+	NSLog(@"data--->%u",[data count]);
+	NSManagedObjectContext *localContext = [NSManagedObjectContext MR_contextForCurrentThread];
+	Categories *categories= [Categories MR_createInContext:localContext];
+	if([data count]==0){
+				
+	}
+	
+
+}
 - (void) getCategories:(NSNotification *) notification
 {
+	[self initCategory];
     // [notification name] should always be @"TestNotification"
     // unless you use this method for observation of other notifications
     // as well.
@@ -51,9 +66,19 @@
 		[operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
 			
 			for(id netraDictionary in [responseObject objectForKey:@"categories"]){
-				NSLog(@"response--->%@",responseObject);
+				NetraObjectCategory *NetraObjectData=[[NetraObjectCategory alloc] initWithDictionary:netraDictionary];
+				if (![self.netraMutableArrayCategory containsObject:NetraObjectData]) {
+					[self.netraMutableArrayCategory addObject:NetraObjectData];
+				}
+				
+			[NetraObjectData release];
+				
 			}
-			
+			for(int i=0;i<self.netraMutableArrayCategory.count; i++){
+				NetraObjectCategory *data=[self.netraMutableArrayCategory objectAtIndex:i];
+				NSLog(@"Kategory->%@,indexnya adalah->%@",data.title,data.id_category);
+				
+			}				
 			
 		} failure:^(AFHTTPRequestOperation *operation, NSError *error) {
 			if(error){

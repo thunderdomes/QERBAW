@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface LeftViewController : UITableViewController
-
+{
+	
+}
+@property(nonatomic,strong)NSMutableArray *netraMutableArrayCategory;
 @end
