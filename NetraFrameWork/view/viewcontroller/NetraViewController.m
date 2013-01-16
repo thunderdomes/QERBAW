@@ -16,6 +16,7 @@
 #define CELL_CONTENT_MARGIN 5.0f
 
 const int kLoadingCellTag = 1273;
+bool already_hidden=0;
 @interface NetraViewController ()
 
 @end
@@ -49,7 +50,10 @@ const int kLoadingCellTag = 1273;
 
 	NSMutableURLRequest *request=[[NSMutableURLRequest alloc] initWithURL:URL cachePolicy:NSURLRequestReloadIgnoringCacheData timeoutInterval:60];
 	AFJSONRequestOperation *operation=[[AFJSONRequestOperation alloc] initWithRequest:request];
-	
+	if(already_hidden==0){
+	NetraTableViewController.hidden=YES;
+		already_hidden=1;
+	}
 	[operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
 		total_page=[[responseObject objectForKey:@"pages"]intValue];
 		for(id netraDictionary in [responseObject objectForKey:@"posts"]){
@@ -63,7 +67,7 @@ const int kLoadingCellTag = 1273;
 			//NSLog(@"self.netraMutableArray.count--->%d",[self.netraMutableArray count]);
 			
 		}
-		
+		NetraTableViewController.hidden=NO;
 		[NetraTableViewController reloadData];
 	} failure:^(AFHTTPRequestOperation *operation, NSError *error) {
 		if(error){

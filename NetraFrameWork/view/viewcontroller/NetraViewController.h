@@ -14,6 +14,7 @@
 	NSInteger current_page;
 	NSInteger total_page;
 	detailViewController *netraDetail;
+
 	
 }
 @property(nonatomic,retain) NSMutableArray *netraMutableArray;
