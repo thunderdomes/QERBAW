@@ -26,7 +26,6 @@
     }
     return self;
 }
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -50,10 +49,10 @@
 		AFJSONRequestOperation *operation=[[AFJSONRequestOperation alloc] initWithRequest:request];
 		
 		[operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
-		
+			
 			for(id netraDictionary in [responseObject objectForKey:@"categories"]){
 				NSLog(@"response--->%@",responseObject);
-						}
+			}
 			
 			
 		} failure:^(AFHTTPRequestOperation *operation, NSError *error) {

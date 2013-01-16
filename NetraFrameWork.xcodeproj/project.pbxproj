@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D0443CD916A667F7000FC13A /* NetraObject.m in Sources */ = {isa = PBXBuildFile; fileRef = D0443CD816A667F7000FC13A /* NetraObject.m */; };
+		D0443CDE16A6681C000FC13A /* Netra.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D0443CDC16A6681C000FC13A /* Netra.xcdatamodeld */; };
+		D0443CE116A66900000FC13A /* Categories.m in Sources */ = {isa = PBXBuildFile; fileRef = D0443CE016A66900000FC13A /* Categories.m */; };
+		D0443CE416A6690F000FC13A /* Data.m in Sources */ = {isa = PBXBuildFile; fileRef = D0443CE316A6690E000FC13A /* Data.m */; };
 		D06D98631685803600DF5A6F /* detailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D06D98621685803600DF5A6F /* detailViewController.m */; };
 		D0877423168291DA0089533D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0877421168291B40089533D /* QuartzCore.framework */; };
 		D0A4E95D1682B4400062A493 /* placeholder.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D0A4E95C1682B4400062A493 /* placeholder.jpg */; };
@@ -54,7 +58,6 @@
 		D0CEAA1F167EF3A0008536F6 /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = D0CEAA14167EF3A0008536F6 /* AFURLConnectionOperation.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		D0CEAA20167EF3A0008536F6 /* AFXMLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = D0CEAA16167EF3A0008536F6 /* AFXMLRequestOperation.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		D0CEAA21167EF3A0008536F6 /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = D0CEAA18167EF3A0008536F6 /* UIImageView+AFNetworking.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
-		D0CEAA24167EF455008536F6 /* NetraObject.m in Sources */ = {isa = PBXBuildFile; fileRef = D0CEAA23167EF455008536F6 /* NetraObject.m */; };
 		D0CEAA28167F0891008536F6 /* NetraCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D0CEAA27167F0891008536F6 /* NetraCell.m */; };
 		D0DF4726167CC168009838EB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0DF4725167CC168009838EB /* UIKit.framework */; };
 		D0DF4728167CC168009838EB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0DF4727167CC168009838EB /* Foundation.framework */; };
@@ -72,6 +75,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D0443CD716A667F7000FC13A /* NetraObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetraObject.h; sourceTree = "<group>"; };
+		D0443CD816A667F7000FC13A /* NetraObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetraObject.m; sourceTree = "<group>"; };
+		D0443CDD16A6681C000FC13A /* Netra.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Netra.xcdatamodel; sourceTree = "<group>"; };
+		D0443CDF16A66900000FC13A /* Categories.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Categories.h; sourceTree = "<group>"; };
+		D0443CE016A66900000FC13A /* Categories.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Categories.m; sourceTree = "<group>"; };
+		D0443CE216A6690E000FC13A /* Data.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Data.h; sourceTree = "<group>"; };
+		D0443CE316A6690E000FC13A /* Data.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Data.m; sourceTree = "<group>"; };
 		D06D98611685803600DF5A6F /* detailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = detailViewController.h; sourceTree = "<group>"; };
 		D06D98621685803600DF5A6F /* detailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = detailViewController.m; sourceTree = "<group>"; };
 		D0877421168291B40089533D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -160,8 +170,6 @@
 		D0CEAA16167EF3A0008536F6 /* AFXMLRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFXMLRequestOperation.m; sourceTree = "<group>"; };
 		D0CEAA17167EF3A0008536F6 /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
 		D0CEAA18167EF3A0008536F6 /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
-		D0CEAA22167EF455008536F6 /* NetraObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetraObject.h; sourceTree = "<group>"; };
-		D0CEAA23167EF455008536F6 /* NetraObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetraObject.m; sourceTree = "<group>"; };
 		D0CEAA26167F0891008536F6 /* NetraCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetraCell.h; sourceTree = "<group>"; };
 		D0CEAA27167F0891008536F6 /* NetraCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetraCell.m; sourceTree = "<group>"; };
 		D0DF4721167CC168009838EB /* NetraFrameWork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetraFrameWork.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -204,6 +212,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D0443CD616A667F7000FC13A /* Json */ = {
+			isa = PBXGroup;
+			children = (
+				D0443CD716A667F7000FC13A /* NetraObject.h */,
+				D0443CD816A667F7000FC13A /* NetraObject.m */,
+			);
+			path = Json;
+			sourceTree = "<group>";
+		};
+		D0443CDB16A6680A000FC13A /* coreData */ = {
+			isa = PBXGroup;
+			children = (
+				D0443CDC16A6681C000FC13A /* Netra.xcdatamodeld */,
+				D0443CE216A6690E000FC13A /* Data.h */,
+				D0443CE316A6690E000FC13A /* Data.m */,
+				D0443CDF16A66900000FC13A /* Categories.h */,
+				D0443CE016A66900000FC13A /* Categories.m */,
+			);
+			path = coreData;
+			sourceTree = "<group>";
+		};
 		D06D9859168577AE00DF5A6F /* detail */ = {
 			isa = PBXGroup;
 			children = (
@@ -343,18 +372,10 @@
 		D0CEAA03167EF36F008536F6 /* model */ = {
 			isa = PBXGroup;
 			children = (
-				D0CEAA04167EF386008536F6 /* Json */,
+				D0443CDB16A6680A000FC13A /* coreData */,
+				D0443CD616A667F7000FC13A /* Json */,
 			);
 			path = model;
-			sourceTree = "<group>";
-		};
-		D0CEAA04167EF386008536F6 /* Json */ = {
-			isa = PBXGroup;
-			children = (
-				D0CEAA22167EF455008536F6 /* NetraObject.h */,
-				D0CEAA23167EF455008536F6 /* NetraObject.m */,
-			);
-			path = Json;
 			sourceTree = "<group>";
 		};
 		D0CEAA05167EF3A0008536F6 /* AFNetworking */ = {
@@ -603,7 +624,6 @@
 				D0CEAA1F167EF3A0008536F6 /* AFURLConnectionOperation.m in Sources */,
 				D0CEAA20167EF3A0008536F6 /* AFXMLRequestOperation.m in Sources */,
 				D0CEAA21167EF3A0008536F6 /* UIImageView+AFNetworking.m in Sources */,
-				D0CEAA24167EF455008536F6 /* NetraObject.m in Sources */,
 				D0CEAA28167F0891008536F6 /* NetraCell.m in Sources */,
 				D0A4E9F01682BA280062A493 /* MagicalImportFunctions.m in Sources */,
 				D0A4E9F11682BA280062A493 /* NSAttributeDescription+MagicalDataImport.m in Sources */,
@@ -633,6 +653,10 @@
 				D0A4EA091682BA290062A493 /* MagicalRecord.m in Sources */,
 				D0A4EA1F168346D70062A493 /* Netra.m in Sources */,
 				D06D98631685803600DF5A6F /* detailViewController.m in Sources */,
+				D0443CD916A667F7000FC13A /* NetraObject.m in Sources */,
+				D0443CDE16A6681C000FC13A /* Netra.xcdatamodeld in Sources */,
+				D0443CE116A66900000FC13A /* Categories.m in Sources */,
+				D0443CE416A6690F000FC13A /* Data.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -742,6 +766,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D0443CDC16A6681C000FC13A /* Netra.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D0443CDD16A6681C000FC13A /* Netra.xcdatamodel */,
+			);
+			currentVersion = D0443CDD16A6681C000FC13A /* Netra.xcdatamodel */;
+			path = Netra.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = D0DF4718167CC168009838EB /* Project object */;
 }

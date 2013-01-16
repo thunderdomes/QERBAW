@@ -191,8 +191,7 @@ const int kLoadingCellTag = 1273;
 {
 	
 	netraDetail =[[detailViewController alloc]init];
-	[self setTitle:@"Your new back title"];
-	[self.navigationController pushViewController:netraDetail animated:YES];
+	[self.navigationController presentViewController:netraDetail animated:YES completion:nil];
 	
 	
 	/* statements here */
